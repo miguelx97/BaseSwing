@@ -23,7 +23,7 @@ public class Log {
 	}
 	
 	
-	public void error(String func, String error) {
+	public void error(String func, String error) {		//Informa de un error
 		print("ERROR: " + "Function: " + func + ". Mensaje: " + error);
 	}
 	
@@ -33,7 +33,7 @@ public class Log {
 	}
 	
 	
-	public void iniFunc(String funcion, Object[] params) {	////Avisa de cuando entra en una funcion con varios parametros
+	public void iniFunc(String funcion, Object[] params) {	//Avisa de cuando entra en una funcion con varios parametros
 		
 		String strParams = "";
 		String separador = " , ";
