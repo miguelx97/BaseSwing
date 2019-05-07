@@ -55,7 +55,7 @@ public class Controlador implements ActionListener {
 				panelForm.tipoPanel(PanelForm.INSERTAR);
 			} else if (((JMenuItem) opcion).equals(vistaPrincipal.getMntmShow())) {
 				log.print("getMntmShow");
-				ArrayList<EjObjeto> lista = persistencia.obtener();
+				ArrayList<EjObjeto> lista = persistencia.obtenerLista();
 				panelShow.rellenarTabla(lista);
 				vistaPrincipal.definirPanel(panelShow);	
 			}
@@ -96,7 +96,7 @@ public class Controlador implements ActionListener {
 					res = persistencia.modificar(ejObjeto);
 					
 					if (res == 1) {
-						panelShow.rellenarTabla(persistencia.obtener());
+						panelShow.rellenarTabla(persistencia.obtenerLista());
 						vistaPrincipal.setMensaje(VistaPrincipal.INFO, "Objeto modificado");
 						vistaPrincipal.definirPanel(panelShow);	
 					}	
